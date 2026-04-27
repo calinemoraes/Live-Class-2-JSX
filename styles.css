@@ -183,7 +183,7 @@ body {
 }
 
 .download-button.tertiary:active {
-    background-color: #dbdbd7;
+    background-color: transparent;
 }
 /* =========================================================
    Version label (top of screen)
