@@ -1,9 +1,19 @@
+/* =========================================================
+   Global reset
+   - Remove default spacing so the layout is consistent
+   - box-sizing makes widths easier to reason about in design
+========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* =========================================================
+   Page framing
+   - Center the pricing row on the page
+   - Use a soft neutral background for contrast
+========================================================= */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +24,11 @@ body {
     padding: 20px;
 }
 
+/* =========================================================
+   Cards layout (row)
+   - Horizontal flow with a consistent gap
+   - nowrap keeps all plans in one row (desktop-first)
+========================================================= */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +38,11 @@ body {
     align-items: flex-start;
 }
 
+/* =========================================================
+   Card shell
+   - Column layout so the button can “stick” to the bottom
+   - Fixed width creates uniform card rhythm
+========================================================= */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +54,16 @@ body {
     flex-shrink: 0;
 }
 
+/* Content area above the CTA button */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* =========================================================
+   Type styles
+   - Keep titles lighter to match the minimal aesthetic
+========================================================= */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +72,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price line uses baseline alignment for amount + period */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +80,41 @@ body {
     align-items: baseline;
 }
 
+/* Price amount (bigger) */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period (smaller, secondary) */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Spacing before the CTA area */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* “Includes:” label above the feature list */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* =========================================================
+   Feature list
+   - Remove bullets (custom checkmark icon instead)
+========================================================= */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Each list row aligns the checkmark with the text */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +123,7 @@ body {
     color: #26251e;
 }
 
+/* Visual “included” mark (kept subtle and aligned) */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +131,11 @@ body {
     font-weight: 400;
 }
 
+/* =========================================================
+   Buttons (CTA)
+   - Pill shape with soft hover states
+   - margin-top:auto pins button to the bottom of the card
+========================================================= */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +158,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary variant for “upgrade” actions */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +172,10 @@ body {
     background-color: #333;
 }
 
+/* =========================================================
+   Version label (top of screen)
+   - Fixed so it stays visible while reviewing the layout
+========================================================= */
 .page-label {
     position: fixed;
     top: 16px;
@@ -143,6 +189,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Emphasize the label’s leading word */
 .page-label strong {
     color: #333;
 }
